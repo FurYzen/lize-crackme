@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id "io.freefair.lombok" version "6.4.1"
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+
+group 'eu.timebreaker.lize'
+version '0.1.0'
+
+sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
+compileJava.options.encoding = "UTF-8"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.0'
+}
+
+jar {
+    manifest.attributes(
+            "Main-Class": "eu.timebreaker.lize.crackme.Launcher"
+    )
+}
+
+shadowJar {
+    dependencies {}
+}
+
+build.dependsOn shadowJar

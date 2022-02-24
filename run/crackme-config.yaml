@@ -1,0 +1,10 @@
+# Lize-Crackme configuration file, please do not remove anything.
+
+# If true, the crackme will logs additional infos
+debugMode: true
+
+# The type of check the crackme will use for the key
+#   Current type:
+#   PLAIN_STRING (will check on an plain string)
+#   PASTEBIN (will check on an plain pastebin)
+checkType: PLAIN_STRING
